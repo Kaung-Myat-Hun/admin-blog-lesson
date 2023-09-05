@@ -1,0 +1,8 @@
+.postsContainer{
+  height: 87vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  overflow-y: scroll;
+}

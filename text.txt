@@ -1,0 +1,85 @@
+admin panel 
+login page >>> (authentication) << register 
+dashboard >>>>
+dashboard - sidemenu > content section navbar footer form 
+
+file structure >>> folder
+page >> done
+layout >> done
+component >> done
+utils >> apis service / apis
+
+setup route >> auth route 
+
+sidemenu >>> reuse 
+>> route name 
+
+admin template >>> web << 
+
+reuseable component >>> custom component
+
+state >>>
+
+email >>> 
+pass >>> 
+button >>> 
+
+2 input >>>> 1 function 
+
+fucntion (e) {
+  setForm ({
+    ...form , 
+    [e.target.name] : e.target.value
+  })
+}
+
+page >> 
+posts list >>> postDetail
+
+posts list 
+card >>> 
+
+post imgae  <<< data  props
+title 
+author 
+body 
+button >> edit / delete 
+
+login >>> token >>> 
+
+.env >>> domain >>
+environment 
+
+post >>> function 
+post method
+
+>>>> realworld api 
+crud >>> create update delete ( read <<< anyone can read // client site ) 
+api leak >>> security <<< token << create >> login post create 
+key card >> 
+
+FTP server >>> file transfer protocol (cloud storage)
+mongo db >>> 
+db > ftp > upload >> 
+image link <<<, server 
+
+
+fileReader <<< 
+create form >>>> 
+
+
+file >>>> 
+header : {
+  content-type : 
+  token : 
+}
+
+image : file >>>> setState  () 
+
+post >>> edit 
+
+post detail >>>> {
+  title >>>> 
+  body >>>>
+  author >>> 
+}

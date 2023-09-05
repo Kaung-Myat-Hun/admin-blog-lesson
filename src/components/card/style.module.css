@@ -1,0 +1,41 @@
+.cardContainer{
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #7f7f7f8a;
+}
+.cardImage{
+  width: 100%;
+  border-radius: 10px;
+}
+.cardTitle, .cardAuthor{
+  color: #7f7f7f;
+  margin: 10px;
+}
+.titleContainer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnEdit, .btnDelete{
+  padding: 7px 10px;
+  width: 100px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.btnDelete:hover, .btnEdit:hover{
+  opacity: 0.8;
+}
+.btnDelete{
+  background-color: red;
+}
+.btnEdit{
+  background-color: #007bff;
+}
+.cardBody{
+  padding: 15px;
+}
