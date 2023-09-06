@@ -89,3 +89,14 @@ logout function
 create >>> token <<< expire >>> create <<< 401 >>> logoutFunction()
 
 get all post api >> client << no authorize 
+
+redux > redux toolkit < remix (state lib) 
+react query < 
+tailwind css > daisyUI > css code < class name 
+ml >> margin left 
+p
+md sm xl lg 
+antD 
+
+e-commerce << (item > add to cart >> 
+checkout << name address screenshot estimate time <<< 1 week >>> backend api )
