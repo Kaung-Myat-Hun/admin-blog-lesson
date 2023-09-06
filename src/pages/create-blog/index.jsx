@@ -50,7 +50,7 @@ function CreateBlog() {
     }).then((res) => {
       console.log(res.data)
       // alert(res.data.message)
-      toast(res.data.message)
+      toast.success(res.data.message)
       resetFunction();
     }).catch((err) => {
       console.error(err)

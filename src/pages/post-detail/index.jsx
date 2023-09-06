@@ -35,7 +35,7 @@ function PostDetail() {
     UpdateFunction(GetSinglePostAPI(id), postData).then((res)=>{
       console.log(res.data)
       // alert(res.data.message)
-      toast(res.data.message)
+      toast.success(res.data.message)
     }).catch((err) => {
       console.error(err)
       if(err.response.status === 401) {
