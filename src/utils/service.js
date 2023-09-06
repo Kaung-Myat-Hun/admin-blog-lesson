@@ -41,3 +41,8 @@ export const UpdateFunction = (url, data) => {
     }
   })
 }
+
+export const LogoutFunction = () => {
+  localStorage.clear();
+  window.location.reload();
+}

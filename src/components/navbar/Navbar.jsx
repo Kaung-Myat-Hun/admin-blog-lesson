@@ -1,6 +1,12 @@
+import { LogoutFunction } from "../../utils/service";
 import styles from "./style.module.css";
+import { useState } from "react";
 
 function Navbar() {
+  const [show, setShow] = useState(false)
+  const showModalHandler = () => {
+    setShow(!show)
+  }
   return (
     <div className={styles.navBarContainer}>
       <div className={styles.logoContainer}>
@@ -32,18 +38,18 @@ function Navbar() {
         </button>
       </div>
       <div className="">
-        <div>
+        <div onClick={showModalHandler}>
           <svg
             viewBox="0 0 24 24"
             fill="none"
             width="32px"
             height="32px"
           >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
               id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
               {" "}
@@ -57,17 +63,21 @@ function Navbar() {
               <path
                 d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20"
                 stroke="#ffffff"
-                stroke-width="1.5"
-                stroke-linecap="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
               ></path>{" "}
               <path
                 d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
                 stroke="#ffffff"
-                stroke-width="1.5"
-                stroke-linecap="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
               ></path>{" "}
             </g>
           </svg>
+        </div>
+        <div className={`${show? styles.modal : styles.hide}`}>
+          <div className={styles.modalBtn}>Profile</div>
+          <div className={styles.modalBtn} onClick={LogoutFunction}>Logout</div>
         </div>
       </div>
     </div>

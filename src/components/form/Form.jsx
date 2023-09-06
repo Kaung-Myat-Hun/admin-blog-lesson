@@ -26,9 +26,13 @@ function Form() {
         console.log(res.data)
         if(res.data.status === "success") {
           localStorage.setItem("token", res.data.data.token.accessToken)
-          setIsLogin(!isLogin)
+          localStorage.setItem("isLogin", true)
+          window.location.reload();
         }
-      }).catch((err)=> console.log(err))
+      }).catch((err)=> {
+        console.log(err)
+        localStorage.setItem("isLogin" , false)
+      })
     
   }
   const showPasshandler = () => {

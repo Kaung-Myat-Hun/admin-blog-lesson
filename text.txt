@@ -83,3 +83,9 @@ post detail >>>> {
   body >>>>
   author >>> 
 }
+
+logout function 
+
+create >>> token <<< expire >>> create <<< 401 >>> logoutFunction()
+
+get all post api >> client << no authorize 

@@ -2,7 +2,7 @@ import Button from "../button/Button";
 import styles from "./style.module.css";
 import { useNavigate } from "react-router-dom";
 import { GetSinglePostAPI } from "../../utils/apis";
-import { DeleteFunction } from "../../utils/service";
+import { DeleteFunction, LogoutFunction } from "../../utils/service";
 
 function Card(props) {
   const navigate = useNavigate();
@@ -20,6 +20,9 @@ function Card(props) {
         })
         .catch((err) => {
           console.error(err);
+          if(err.response.status === 401) {
+            LogoutFunction();
+          }
         });
     }
   };

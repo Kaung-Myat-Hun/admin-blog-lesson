@@ -5,7 +5,8 @@ import { useParams } from "react-router-dom";
 import styles from "./style.module.css";
 import Input from "../../components/input/Input";
 import Button from "../../components/button/Button";
-import { UpdateFunction } from "../../utils/service";
+import { LogoutFunction, UpdateFunction } from "../../utils/service";
+import { toast } from "react-toastify";
 
 function PostDetail() {
 
@@ -33,9 +34,13 @@ function PostDetail() {
   const updateHandler = () => {
     UpdateFunction(GetSinglePostAPI(id), postData).then((res)=>{
       console.log(res.data)
-      alert(res.data.message)
+      // alert(res.data.message)
+      toast(res.data.message)
     }).catch((err) => {
       console.error(err)
+      if(err.response.status === 401) {
+        LogoutFunction();
+      }
     })
   }
   return (

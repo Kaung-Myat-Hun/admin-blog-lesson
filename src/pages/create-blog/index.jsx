@@ -5,6 +5,8 @@ import styles from "./style.module.css";
 import axios from "axios";
 import { GetAllPostsAPI } from "../../utils/apis";
 import { token } from "../../utils/apis";
+import { LogoutFunction } from "../../utils/service";
+import { toast } from "react-toastify";
 
 function CreateBlog() {
   const initialFormData = {
@@ -47,10 +49,14 @@ function CreateBlog() {
       }
     }).then((res) => {
       console.log(res.data)
-      alert(res.data.message)
+      // alert(res.data.message)
+      toast(res.data.message)
       resetFunction();
     }).catch((err) => {
       console.error(err)
+      if(err.response.status === 401 ){
+        LogoutFunction();
+      }
     })
   }
   return (

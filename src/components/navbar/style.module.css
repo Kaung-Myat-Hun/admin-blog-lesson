@@ -17,3 +17,25 @@
   background-color: transparent;
   margin-top: 7px;
 }
+.modal{
+  position: absolute;
+  top: 70px;
+  background-color: #fff;
+  right: 20px;
+  color: #000;
+  box-shadow: 0px 0px 3px #7f7f7f;
+  width: 150px;
+  border-radius: 10px;
+}
+.modalBtn{
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+.modalBtn:hover{
+  background-color: #7f7f7f2c;
+}
+.hide{
+  display: none;
+}
