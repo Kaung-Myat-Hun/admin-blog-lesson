@@ -21,14 +21,12 @@ function CreateBlog() {
     setImageLink("")
   }
   const changeHandler = (e) => {
-    console.log(e.target.value);
     setFormData({
       ...formData , 
       [e.target.name] : e.target.value
     })
   };
   const fileChangeHandler = (e) => {
-    console.log(e.target.files[0])
     setFormData({
       ...formData, 
       image: e.target.files[0]
@@ -48,7 +46,6 @@ function CreateBlog() {
         token : token
       }
     }).then((res) => {
-      console.log(res.data)
       // alert(res.data.message)
       toast.success(res.data.message)
       resetFunction();
